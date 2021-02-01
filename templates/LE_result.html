@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+			 </br>
+  <tr>
+      <td>
+     <form action="home1" method="post" name="home" id="home">
+        <input style="margin-left:20px; padding: 8px 16px; font-size: 18px; font-weight: bold;" type="submit" name="Submit" value="Home">
+      </td>
+      <td>
+     <input style="margin-left:10px; padding: 8px 16px; font-size: 18px; font-weight: bold;" type="button" value="Back" onclick="history.back()">
+    </form>
+      </td>
+      </tr>
+
+		 <div class="main_div">
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+		</div>
+		<h2 style="color:blue;font-size:40px;text-align: center; margin-top:0%;">Loan Eligibility Prediction </h2>
+
+	</div>
+	</header>
+	<p style="color:lightyellow;font-size:28px;text-align: center;"><b>Results for your inputs</b></p>
+	<div class="results">
+	</br>
+	{% if prediction == 1%}
+	<h2 style="color:black;font-size:30px;text-align: center">This loan is eligible</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:black;font-size:30px;text-align: center">This is not eligible</h2>
+	{% endif %}
+	</div>
+	</div>
+    <style>
+        body {
+            background-image: url('static/LE_new_backg.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            padding: 0px;
+        }
+		.main_div{
+		text-align: center;
+		}
+	</style>
+</body>
+</html>

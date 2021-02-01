@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<style>
+  #inputFields{
+  float:right;
+  font-size:20px;
+  }
+</style>
+
+  <body style=" background-image: url('static/Mort_new_backg.jpeg'); background-repeat:no-repeat; background-size: 1600px 800px;">
+  </br>
+   <form style="margin-left:20px;" action="home1" method="post" name="home" id="home">
+        <input style="padding: 8px 16px; font-size: 18px; font-weight: bold;" type="submit" name="Submit" value="Home"></a>
+        </form>
+
+     <h1 style="text-align: center; color:black ;font-size:35px; margin-top:0%; ">Mortgage Analytics</h1><br>
+    </br>
+
+    <div style = "margin:auto; width: 38%; border: 3px solid grey; padding: 25px;" >
+              </br>
+          <div class="mb-3 row">
+              <label id="inputFields" for="single_predict" class="col-sm-6 col-form-label"><B>Prediction For Single User:</B></label>
+          <div class="col-sm-6">
+        <form action="MA_single_predict" method="POST" enctype = "multipart/form-data">
+              <input class="btn btn-warning" style="margin-left:70px;" id="sub" type="submit" value="Single User&nbsp;">
+           </form>
+          </div>
+         </div>
+
+         </br>
+         <div class="mb-3 row">
+            <label id="inputFields" for="single_predict" class="col-sm-6 col-form-label"><B>Prediction For Bulk User:</B></label>
+          <div class="col-sm-6">
+           <form  action="MA_multi_predict" method="POST" enctype = "multipart/form-data">
+            <input class="btn btn-warning" style="margin-left:70px;" id="sub" type="submit" value="&nbsp;&nbsp;Bulk User&nbsp;&nbsp;">
+           </form>
+          </div>
+         </div>
+
+            </br>
+        <div class="mb-3 row">
+            <label id="inputFields" for="retrain_model" class="col-sm-6 col-form-label"><B>Retrain And Predict:</B></label>
+          <div class="col-sm-6">
+          <form  action="MA_retrain" method="POST" enctype = "multipart/form-data">
+            <input class="btn btn-warning" style="margin-left:70px;" id="sub" type="submit" value="&nbsp;&nbsp;&nbsp;Retrain&nbsp;&nbsp;&nbsp;&nbsp;">
+           </form>
+          </div>
+        </div>
+
+          </br>
+        <div class="mb-3 row">
+            <label id="inputFields" for="retrain_model" class="col-sm-6 col-form-label"><B>Visualization of Data:</B></label>
+          <div class="col-sm-6">
+          <form  action="MA_data_graph" method="POST" enctype = "multipart/form-data">
+            <input class="btn btn-warning" style="margin-left:70px;" id="sub" type="submit" value="&nbsp;&nbsp;&nbsp;&nbsp;Graph&nbsp;&nbsp;&nbsp;&nbsp;">
+           </form>
+          </div>
+        </div>
+
+        </div>
+
+    </body>
+</html>
